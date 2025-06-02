@@ -1,0 +1,93 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "flare",
+  "colors": {
+    "primary": "#1C3455",
+    "light": "#1C3455",
+    "dark": "#1C3455"
+  },
+  
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "favicon": "/favicon.png",
+  "navigation": {"groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "get-started/introduction",
+              "get-started/bases",
+              "get-started/donator"
+            ]
+          },
+          {
+            "group": "Server Setup",
+            "pages": [
+              "server-setup/bump-reminder",
+              "server-setup/voicemaster"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/lastfm",
+              "integrations/social-notifications"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "resources/syntax",
+              "resources/fake-permissions",
+              {
+                "group": "Scripting",
+                "icon": "scroll",
+                "pages": [
+                  "resources/scripting/embeds",
+                  "resources/scripting/variables"
+                ]
+              },
+              "resources/languages"
+            ]
+          },
+          {
+            "group": "Miscellaneous",
+            "pages": [
+              "miscellaneous/counters"
+            ]
+          },
+          {
+            "group": "Common issues",
+            "pages": [
+              "common-issues/ios-dash",
+              "common-issues/server-removal"
+            ]
+          }
+        ]
+    
+  },
+  "logo": {
+    "light": "/favicon.png",
+    "dark": "/favicon.png"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support Server",
+        "href": "https://discord.com/invite/flare"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Home",
+      "href": "https://flare.rest"
+    }
+  },
+  "footer": {
+    "socials": {
+      "discord": "https://discord.com/invite/flare"
+    }
+  }
+}

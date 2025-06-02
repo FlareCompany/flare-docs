@@ -1,0 +1,36 @@
+---
+title: "Fake Permissions"
+description: "The list of permissions you can assign to a role as fake permissions."
+icon: "masks-theater"
+---
+
+<Frame>
+  <img src="/images/resources/fake-permissions.png" />
+</Frame>
+
+When you run the `fakepermissions` command, you'll be prompted to specify a permission—for example: `,fakepermissions @Moderator manage_nicknames`.
+
+<Info>
+This command only allows users to bypass permission checks within **flare** — it doesn't grant the actual permission. For example, if a moderator receives the `ban_members` permission through fake permissions, they can only ban users using the `ban` command via **flare**, not through other bots or the Discord client.
+</Info>
+
+| Permission            | Normal Name           | Example Action                                                     |
+|-----------------------|------------------------|----------------------------------------------------------------------|
+| `kick_members`        | Kick Members           | Remove a member from the server.                                    |
+| `ban_members`         | Ban Members            | Permanently ban a member from the server.                           |
+| `administrator`       | Administrator          | Full access to all server features and settings.                    |
+| `manage_channels`     | Manage Channels        | Create, edit, or delete channels.                                   |
+| `manage_guild`        | Manage Server          | Change server settings such as name, region, or features.           |
+| `manage_messages`     | Manage Messages        | Delete or pin messages sent by other users.                         |
+| `mention_everyone`    | Mention Everyone       | Mention `@everyone` or `@here` in a message.                        |
+| `view_guild_insights` | View Server Insights   | Access server analytics and insights.                               |
+| `mute_members`        | Mute Members           | Mute users in voice channels.                                       |
+| `deafen_members`      | Deafen Members         | Deafen users in voice channels.                                     |
+| `move_members`        | Move Members           | Transfer users between voice channels.                              |
+| `manage_nicknames`    | Manage Nicknames       | Change nicknames of other members.                                  |
+| `manage_roles`        | Manage Roles           | Create, edit, or delete roles and assign them to members.           |
+| `manage_webhooks`     | Manage Webhooks        | Create, edit, or remove webhooks in channels.                       |
+| `manage_expressions`  | Manage Expressions     | Upload or remove emojis and stickers.                               |
+| `moderate_members`    | Moderate Members       | Timeout members for a specific duration.                            |
+| `view_audit_log`      | View Audit Log         | View the record of server events and actions taken.                 |
+| `external_emojis`     | Use External Emojis    | Use emojis from servers the user is a member of.                    |

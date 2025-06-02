@@ -1,0 +1,110 @@
+---
+title: Embeds
+description: "Guide to understand the fundamentals of scripting embeds."
+icon: brackets-curly
+---
+
+<Frame>
+  <img src="/images/resources/embeds.png" />
+</Frame>
+
+## Structure
+
+Each parameter in the embed is represented by a key-value pair which is separated by a colon. For example, the `title` parameter will look like `{title: hello {user}}`. The `{user}` is a [variable](/resources/scripting/variables) which will be filled in with the user's display name.
+
+- `{` begins a parameter.
+- `:` separates parameter from content.
+- `$v` separates the parameters.
+- `}` ends a parameter.
+
+<Frame>
+  <Note>
+      Check out at our [embed builder](https://flare.rest/embed) to help you creating your embeds without struggle
+  </Note>
+</Frame>
+
+### Parameters list
+
+- `url` - The embed URL. (`https://..`)
+- `color` - The embed color. (`#FFFFFF`)
+- `title` - The embed title. (`hello {user}`)
+- `description` - The embed description. (`hello {user}`)
+- `image` - The embed image URL. (`https://..`)
+- `thumbnail` - The embed thumbnail URL. (`https://..`)
+- `timestamp` - The embed timestamp. (**NO ARGUMENTS**)
+
+The following parameters require additional arguments which are separated by `&&`.
+
+<AccordionGroup>
+    <Accordion title="Author">
+        - `name` - The author's name.
+        - `icon` - The author's icon. **Optional**
+        - `url` - The author's URL. **Optional**
+        <CodeGroup>
+            ```javascript Syntax
+            {author: name && icon && url}
+            ```
+
+            ```javascript Example
+            {author: {user} && {user.avatar}}
+            ```
+        </CodeGroup>
+    </Accordion>
+    <Accordion title="Field">
+        - `name` - The field name.
+        - `value` - The field value.
+
+        <Info>Include **inline** at the end of the field to make it inline.</Info>
+
+        <CodeGroup>
+        ```javascript Syntax
+        {field: name && value}
+        ```
+
+        ```javascript Example
+        {field: {user} && this is the value}
+        ```
+        </CodeGroup>
+    </Accordion>
+    <Accordion title="Footer">
+        - `text` - The footer text.
+        - `icon` - The footer icon. **Optional**
+        <CodeGroup>
+            ```javascript Syntax
+            {footer: text && icon}
+            ```
+            ```javascript Example
+            {footer: {user}}
+            {footer: {user} && {user.avatar}}
+            ```
+        </CodeGroup>
+    </Accordion>
+
+</AccordionGroup>
+
+### Variables
+
+You can use dynamic variables in your embeds to display user-specific information. For example, `{user}` will be replaced with the user's display name.
+
+<Info>You can view the available variables by clicking [here](/resources/scripting/variables).</Info>
+ ``` 
+{description: The name of this guild is **{guild.name}**}$v{content: Hello! {user.mention}, what's up?}
+```
+  <Frame type="glass">
+    <img src="/images/resources/embed-syntax.png"/>
+  </Frame>
+
+## Frequently Asked Questions
+
+### How do I insert a line break in the description field?
+
+Use `SHIFT` + `ENTER` to add a line break inside your description field.
+
+### Why doesn't my embed code work with some commands?
+
+Since some commands support both plain text and embed formatting, you must indicate when you're using an embed. Begin your embed with `{embed}$v` to define the variables, then write the rest of your embed content as usual.
+
+
+```
+ welcome message {embed}$v{message: Welcome to /{guild.name} {user.mention}}$v{description: Enjoy your stay!}$v{thumbnail: {user.avatar}}
+```

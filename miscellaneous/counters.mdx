@@ -1,0 +1,111 @@
+---
+title: "Counters"
+description: "Create channel counters on your channels to display server stats."
+icon: timer
+---
+
+<Frame>
+  <img src="/images/miscellaneous/counters.png" />
+</Frame>
+
+# Counter types
+
+<CodeGroup>
+
+```text Humans
+Description: Shows up how many humans are in the server.
+Syntax: humans
+```
+
+```text Bots
+Description: Shows up how many bots are in the server.
+Syntax: bots
+```
+
+```text Members
+Description: Shows up how many members are in the server.
+Syntax: members
+```
+
+```text Boosters
+Description: Shows up how many users are currently bossting the server.
+Syntax: boosters
+```
+
+```text Voice
+Description: Shows up how many people are currently in voice channels.
+Syntax: voice
+```
+
+</CodeGroup>
+
+## Adding a counter channel
+
+You can use the subcommand `add`to add a new counter.
+To place where your number count will be use the `target` variable.
+
+<Warning>
+The `{target}` variable is **necessary** in the command.
+</Warning>
+
+<Note>
+You can only have up to **1** counter **per** type.
+</Note>
+
+<CodeGroup>
+```javascript Syntax
+,counter add (channel type) (name)
+```
+
+```javascript Example
+,counter add boosters voice 💎・boosters: {target}
+```
+</CodeGroup>
+
+<br />
+<Frame>
+    <img src="/images/miscellaneous/counter-add.png" />
+</Frame>
+
+<Info>
+Only voice channels can contain: **capitals**, **ponctuation** marks, **spaces** and **special characters**.
+</Info>
+
+## Removing a counter channel
+
+To remove a counter, choose the type you choosed for it and use the `remove` subcommand.
+
+<CodeGroup>
+
+```javascript Syntax
+,counter remove (channel type)
+```
+
+```javascript Example
+,counter remove boosters
+```
+</CodeGroup>
+
+<br />
+<Frame>
+    <img src="/images/miscellaneous/counter-remove.png" />
+</Frame>
+
+## Listing counter channels
+
+You can see what counters you added in the server by using the `list` subcommand.
+
+<CodeGroup>
+
+```javascript Syntax
+,counter list
+```
+
+```javascript Example
+,counter list
+```
+</CodeGroup>
+
+**DEV NOTE: HERE IMAGE COUNTER LIST**
+
+

@@ -1,0 +1,157 @@
+---
+title: VoiceMaster
+description: 'Create temporary voice channels which can be customized to your liking'
+icon: 'phone-plus'
+---
+
+<Frame>
+  <img src="/images/server-setup/voicemaster.png" />
+</Frame>
+
+## Getting started
+
+The first step to using **VoiceMaster** is to use the `voicemaster setup` command.
+
+<Tip>The created channels can be **moved** and **renamed** to your liking.</Tip>
+
+### What is the interface channel?
+
+The `#interface` channel will contain an embed with buttons that allow members to customize their temporary voice channel. This channel should be locked to keep the embed message at the top of the channel.
+
+<Frame>
+  <img src="/images/server-setup/voicemaster-panel.png" />
+</Frame>
+
+### What is the Join to Create channel?
+
+The **Join to Create** channel is where members will join to create their temporary voice channel. This channel is required for the **VoiceMaster** system to work.
+
+## Customizing new voice channels
+
+You can customize what the temporary voice channels look like when they're created.
+
+More commands are planned.
+
+<AccordionGroup>
+    <Accordion title="Setting the default channel name">
+        <Info>The name can use the `{user}`, `{user.name}` and `{user.display_name}` variables.</Info>
+        <CodeGroup>
+            ```javascript Syntax
+            ,voice rename (name)
+            ```
+
+            ```javascript Example
+            ,voice rename gaming
+            ```
+        </CodeGroup>
+    </Accordion>
+
+</AccordionGroup>
+
+### Setting up the permissions
+
+If you're interested in making your `#interface` channel only visible to members inside a temporary voice channel, you would need to set the permissions accordingly.
+
+You would need to deny the **View Channel** permission for the `@everyone` role and allow the **View Channel** permission for the role you set in the previous step.
+
+## Customizing your voice channel
+
+The following commands can be done via the `#interface` channel.
+
+### Renaming your voice channel
+
+You can use the `voice rename` command to change the name of your voice channel.
+
+
+<CodeGroup>
+    ```javascript Syntax
+    ,voice rename (name)
+    ```
+
+    ```javascript Example
+    ,voice rename vani's lounge
+    ```
+
+</CodeGroup>
+
+### Making your voice channel private
+
+You can lock & hide your voice channel with the following commands.
+
+- `voicemaster lock` - Prevents anyone from joining the voice channel.
+  - `voicemaster unlock` - Allows anyone join the voice channel.
+- `voicemaster ghost` - Hides the voice channel from the channel list.
+  - `voicemaster unghost` - Reveals the voice channel in the channel list.
+
+#### Permitting members to join
+
+You can use the `voicemaster permit` command to allow specific members to join your voice channel.
+
+<CodeGroup>
+    ```javascript Syntax
+    ,voice permit (member or role)
+    ```
+
+    ```javascript Example
+    ,voice permit @oqw7
+    ```
+
+</CodeGroup>
+
+### Mute a member in your voice channel
+
+You can use the `voice mute` command to mute a connected member
+
+<Info>You must have the `Moderate Members` permission to use this command.</Info>
+
+<CodeGroup>
+    ```javascript Syntax
+    ,voice mute (member)
+    ```
+
+    ```javascript Example
+    ,voice mute @skyquestor
+    ```
+
+</CodeGroup>
+
+### Unmute a member in your voice channel
+
+You can use the `voice unmute` command to mute a connected member
+
+<Info>You must have the `Moderate Members` permission to use this command.</Info>
+
+<CodeGroup>
+    ```javascript Syntax
+    ,voice unmute (member)
+    ```
+
+    ```javascript Example
+    ,voice unmute @skyquestor
+    ```
+
+</CodeGroup>
+
+## Related commands
+
+<AccordionGroup>
+    <Accordion title="Claiming ownership">
+        If the owner of a voice channel leaves, you can use the `voice claim` command to take ownership of the voice channel.
+    </Accordion>
+    <Accordion title="Transferring ownership">
+        You can use the `voice transfer` command to transfer ownership of a voice channel to another member.
+        <CodeGroup>
+            ```javascript Syntax
+            ,voicemaster transfer (member)
+            ```
+
+            ```javascript Example
+            ,voicemaster transfer @oqw7
+            ```
+        </CodeGroup>
+    </Accordion>
+</AccordionGroup>
+
+
+
+

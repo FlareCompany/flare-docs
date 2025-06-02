@@ -1,0 +1,58 @@
+---
+title: "Bump Reminder"
+description: "Receive reminders to bump your server on disboard"
+icon: bell
+---
+
+<Frame>
+  <img src="/images/server-setup/bump-reminder.png" />
+</Frame>
+
+## Explanation
+
+Bumping your server through **DISBOARD** will your discord server appear in [disboard.org](https://disboard.org)
+You can add tags and a description to present your server to all disboard users. After bumping you need yo wait **2 hours** before doing another bump, this is why we have a reminder so it's easier for you. (also if you forgot dumi)
+
+<Note>
+You can invite the **DISBOARD** bot by clicking [here](https://discord.com/oauth2/authorize?scope=identify+guilds+guilds.join&response_type=code&approval_prompt=auto&client_id=302050872383242240&redirect_uri=https%3A%2F%2Fdisboard.org%2Fsite%2Foauth-callback).
+</Note>
+
+## Setting up bump reminder
+
+After inviting the **DISBOARD** bot, you can enable bump reminders by selecting the channel where you want to receive notifications to run `/bump` every **two hours**.
+
+<CodeGroup>
+
+```javascript Syntax
+,bumpreminder add
+```
+
+```javascript Example
+,bumpreminder add
+```
+
+</CodeGroup>
+<br />
+<Frame>
+    <img src="/images/server-setup/bump-reminder-add.png" />
+</Frame>
+
+## Removing bump reminder
+
+If you wish to remove the bump reminder from your server you can remove it via the subcommand
+
+<CodeGroup>
+
+```javascript Syntax
+,bumpreminder remove
+```
+
+```javascript Example
+,bumpreminder remove
+```
+
+</CodeGroup>
+<br />
+<Frame>
+    <img src="/images/server-setup/bump-reminder-remove.png" />
+</Frame>

@@ -1,0 +1,61 @@
+---
+title: "Last.fm"
+description: "Share your music listening activity with your friends."
+icon: "lastfm"
+---
+
+<Frame>
+  <img src="/images/integrations/last-fm.png" />
+</Frame>
+
+# What is Last.fm?
+Last.fm is a website which tracks the music you listen to and provides statistics based on your listening history. You can register for a Last.fm account by clicking [here](https://www.last.fm/join).
+
+<Steps>
+  <Step title="Registration">
+    Visit the [Last.fm registration page](https://www.last.fm/join) and fill in
+    the required information.
+  </Step>
+  <Step title="Verification">
+    Verify your email address by clicking the link sent to your
+    [inbox](https://gmail.com/).
+  </Step>
+</Steps>
+
+# Connecting your Last.fm account
+
+To connect your Last.fm account to flare, use the `lastfm set` command and add your Last.fm username after it
+
+<CodeGroup>
+    ```javascript Syntax
+    ,lastfm login (username)
+    ```
+     ```javascript Example
+    ,lastfm login evann-fnz
+    ```
+</CodeGroup>
+
+<Warning>
+flare will automatically cache your library, please be patient before using any commands that rely on your library, as it may take a few seconds to fully index your library so please be **patient**.
+</Warning>
+
+<Info>
+Your library will be automatically refreshed every **24** hours. You can also manually refresh your library early with the lastfm refresh command.
+</Info>
+
+## Known Issues
+
+### Out of Sync
+
+**Last.fm** and **Spotify** struggle to stay in sync, causing outdated information to be displayed.
+
+- Restart your **Spotify application** to force a refresh.
+- Disconnect and reconnect your **Spotify account** in the [Last.fm connections](https://www.last.fm/settings/applications).
+
+### Last.fm Failure
+
+If you see an unexpected error message, it's possible that **Last.fm** is currently down.
+
+- Check the [Last.fm status page](https://status.last.fm/) for more information.
+- If the issue persists, please join our [support server](/discord) for further assistance.
+

@@ -1,1 +1,1 @@
-# flare-docs
+flare bot official docs
