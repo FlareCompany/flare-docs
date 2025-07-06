@@ -1,0 +1,50 @@
+---
+icon: "list"
+title: Aliases
+description: "Get to know how aliases work"
+---
+
+<Frame>
+  <img src="/images/miscellaneous/aliases.png" />
+</Frame>
+
+# Aliases types
+
+<AccordionGroup>
+    <Accordion title="General Aliases" icon="server">
+        With the general aliases, you can add more ways to execute a command with a custom word, it doesn't have to fit the same name as a command or another alias, moderators can edit them in the server and people can use them if the have the right permissions for the commands.
+    </Accordion>
+    <Accordion title="Self Aliases" icon="user">
+        Self aliases are personal aliases that you can use everywhere with flare.
+        <Warning>
+           Self Aliases are only available for **premium users**.
+        </Warning>
+    </Accordion>
+</AccordionGroup>
+
+# Aliases Arguments
+
+Aliases can also contain arguments, which means you can even add more customization and shortcuts within flare.
+
+For example setting an afk alias called "dogwalk" and instead setting the reason to "I'm walking my dog."
+
+<Note>
+    For aliases such as this one, it is preferable to use a **selfalias** (and you don't have permissions in every server).
+</Note>
+
+<CodeGroup>
+    ```javascript Syntax
+    ,selfalias add (alias) (command) {arguments}
+    ```
+     ```javascript Example
+    ,selfalias add dogwalk afk I'm walking my dog.
+    ```
+</CodeGroup>
+
+<Frame>
+  <img src="/images/miscellaneous/selfalias-arg.png" />
+</Frame>
+
+<Tip>
+    You can also use the **subcommands** to see the list of aliases/selfaliases, add and remove aliases.
+</Tip>

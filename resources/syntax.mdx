@@ -1,6 +1,6 @@
 ---
 title: Syntax
-description: "General explanation of the syntax used for commands."
+description: "General explanation of the syntax used for commands"
 icon: text
 ---
 
@@ -12,33 +12,22 @@ icon: text
 
 When a command requires a `duration` parameter, you format it as a number followed by a unit. The unit can be one of the following:
 
-- `s` for seconds.
-- `m` for minutes.
-- `h` for hours.
-- `d` for days.
-- `w` for weeks.
+`s` for seconds ; `m` for minutes ;
+`h` for hours ;
+`d` for days ;
+`w` for weeks.
 
-For example, `1d` stands for one day, and `1w` stands for one week. You can also combine them — `1w2d` means one week and two days.
+For example, `5d` stands for five days, and `1w` stands for one week. You can also combine them — `1w3d` means one week and three days.
 
 <CodeGroup>
 
     ```javascript Correct
-    ,timeout @member 1h
-    ,timeout @member 2d3h
+    ,timeout @member 5h
+    ,timeout @member 3d5h
     ```
     ```javascript Incorrect
-    ,timeout @member 1 hour
-    ,timeout @member 2 days 3 hours
+    ,timeout @member 5 hour
+    ,timeout @member 3 days 5 hours
     ```
 
 </CodeGroup>
-
-## Removing entries via ID
-
-For certain commands, entries can be removed using their ID. You can find the ID by using the `list` subcommand.  
-Once you have the ID, use the `remove` subcommand with the format: `select:ID`.
-
-
-## Flag Punishments
-
-Soon.

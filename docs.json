@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
+  "theme": "mint",
   "name": "flare",
   "colors": {
     "primary": "#1C3455",
@@ -26,14 +26,16 @@
             "group": "Server Setup",
             "pages": [
               "server-setup/bump-reminder",
-              "server-setup/voicemaster"
+              "server-setup/voicemaster",
+              "server-setup/vanity"
             ]
           },
           {
             "group": "Integrations",
             "pages": [
               "integrations/lastfm",
-              "integrations/social-notifications"
+              "integrations/haunt",
+              "integrations/guns"
             ]
           },
           {
@@ -55,7 +57,8 @@
           {
             "group": "Miscellaneous",
             "pages": [
-              "miscellaneous/counters"
+              "miscellaneous/counters",
+              "miscellaneous/aliases"
             ]
           },
           {
@@ -87,7 +90,8 @@
   },
   "footer": {
     "socials": {
-      "discord": "https://discord.com/invite/flare"
+      "discord": "https://discord.com/invite/flare",
+      "github": "https://github.com/FlareCompany/flare-docs"
     }
   }
 }

@@ -80,8 +80,8 @@ You can lock & hide your voice channel with the following commands.
 
 - `voicemaster lock` - Prevents anyone from joining the voice channel.
   - `voicemaster unlock` - Allows anyone join the voice channel.
-- `voicemaster ghost` - Hides the voice channel from the channel list.
-  - `voicemaster unghost` - Reveals the voice channel in the channel list.
+- `voicemaster hide` - Hides the voice channel from the channel list.
+  - `voicemaster reveal` - Reveals the voice channel in the channel list.
 
 #### Permitting members to join
 
@@ -142,11 +142,11 @@ You can use the `voice unmute` command to mute a connected member
         You can use the `voice transfer` command to transfer ownership of a voice channel to another member.
         <CodeGroup>
             ```javascript Syntax
-            ,voicemaster transfer (member)
+            ,voice transfer (member)
             ```
 
             ```javascript Example
-            ,voicemaster transfer @oqw7
+            ,voice transfer @oqw7
             ```
         </CodeGroup>
     </Accordion>
