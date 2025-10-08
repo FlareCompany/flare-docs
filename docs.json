@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "flare",
   "colors": {
-    "primary": "#1C3455",
-    "light": "#1C3455",
-    "dark": "#1C3455"
+    "primary": "#B6CCE8",
+    "light": "#B6CCE8",
+    "dark": "#B6CCE8"
   },
   
   "appearance": {
