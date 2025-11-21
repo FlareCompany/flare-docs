@@ -31,6 +31,12 @@
             ]
           },
           {
+            "group": "Economy",
+            "pages": [
+              "economy/guide"
+            ]
+          },
+          {
             "group": "Integrations",
             "pages": [
               "integrations/lastfm",
